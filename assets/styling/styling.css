@@ -27,3 +27,20 @@ body {
     text-align: center;
     margin-bottom: 20px;
   }
+  /* Weather Information Section */
+.weather-info {
+    margin-top: 20px;
+  }
+  
+  /* Search Container using Flex Layout */
+  .search-container {
+    display: flex;
+  }
+  
+  /* Text Input Styles */
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
