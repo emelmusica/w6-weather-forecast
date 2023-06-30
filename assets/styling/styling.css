@@ -6,6 +6,13 @@ body {
     margin: 0;
     padding: 0;
   }
+
+  /* Heading */
+  .weather-search-heading {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
   
   /* Create a container with a maximum width of 800px, centered with auto margins, and add padding and a box shadow */
   .container {
