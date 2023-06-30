@@ -6,28 +6,21 @@
   <link rel="stylesheet" href="assets/styling/styling.css">
 </head>
 <body>
-    <!-- Heading for Weather Search with the "weather-search-heading" class -->
-    <h1 class="weather-search-heading">Weather Search</h1>
-  <!-- Main container for the Weather App -->
-  <div class="container">
-    <!-- Container for the search input and button -->
-    <div class="search-container">
-      <!-- Input field for entering the city name -->
-      <input type="text" id="cityInput" placeholder="Enter city name...">
-      <!-- Search button -->
-      <button id="searchBtn">Search</button>
+    <div class="container">
+        <h1 class="weather-search-heading">Weather Forecast</h1>
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter city name...">
+            <button id="searchBtn">Search</button>
+        </div>
+        <div id="weatherData"></div>
+        <div id="forecastAndRecentSearches">
+            <div id="forecast"></div>
+            <div id="recentSearches">
+                <h2>Recent Searches</h2>
+                <ul id="historyList"></ul>
+            </div>
+        </div>
     </div>
-    <!-- Container to display current weather data -->
-    <div id="weatherData"></div>
-    <!-- Flex container for displaying the 5-day forecast and search history side-by-side -->
-    <div class="flex-container">
-      <!-- Container to display the 5-day forecast -->
-      <div id="forecast"></div>
-      <!-- Unordered list to display the search history -->
-      <ul id="historyList"></ul>
-    </div>
-  </div>
-
   <!-- Link to external JavaScript file -->
   <script src="assets/script.js"></script>
 </body>

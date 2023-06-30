@@ -74,23 +74,30 @@ function displayWeatherData(data) {
 
 // Function to display 5-day forecast data
 function displayForecastData(data) {
-  forecast.innerHTML = '<h2>5-Day Forecast:</h2>';
-
-  for (let i = 0; i < data.list.length; i += 8) {
-    const { dt_txt, main, weather, wind } = data.list[i];
-    const weatherIcon = `https://openweathermap.org/img/w/${weather[0].icon}.png`;
-
-    forecast.innerHTML += `
-      <div class="day">
+    forecast.innerHTML = ''; // Clear the existing forecast data before adding new data
+    const forecastHeader = document.createElement('h2');
+    forecastHeader.textContent = '5-Day Forecast:';
+    forecast.appendChild(forecastHeader);
+  
+    for (let i = 0; i < data.list.length; i += 8) {
+      const { dt_txt, main, weather, wind } = data.list[i];
+      const weatherIcon = `https://openweathermap.org/img/w/${weather[0].icon}.png`;
+  
+      const dayContainer = document.createElement('div');
+      dayContainer.classList.add('day');
+  
+      dayContainer.innerHTML = `
         <p>${new Date(dt_txt).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}</p>
         <p><img src="${weatherIcon}" alt="Weather Icon" class="weather-icon"></p>
         <p>Temp: ${main.temp} °C</p>
         <p>Humidity: ${main.humidity}%</p>
         <p>Wind: ${wind.speed} m/s</p>
-      </div>
-    `;
+      `;
+  
+      forecast.appendChild(dayContainer);
+    }
   }
-}
+  
 
 // Function to add a city to the search history
 function addToSearchHistory(city) {

@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
   }
-
+  
   /* Heading */
   .weather-search-heading {
     font-size: 24px;
@@ -14,13 +14,13 @@ body {
     text-align: center;
   }
   
-  /* Create a container with a maximum width of 800px, centered with auto margins, and add padding and a box shadow */
+  /* Create a container to fit the entire page, and add padding and a box shadow */
   .container {
-    max-width: 800px;
-    margin: 20px auto;
+    width: 100%; /* Take the entire width of the page */
     padding: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the width */
   }
   
   /* Style for the search container, using flexbox to align items horizontally and add a margin at the bottom */
@@ -69,9 +69,9 @@ body {
     flex-wrap: wrap;
   }
   
-  /* Style for the individual day forecast, set it to flex-basis to define the initial size and add margin, padding, box shadow, and border radius */
+  /* Style for the individual day forecast, set it to flex-basis to define the initial size, add margin, padding, box shadow, and border radius */
   .day {
-    flex-basis: calc(33.3333% - 20px);
+    flex-basis: calc(19% - 20px); /* Change the flex-basis to 19% minus the margin (20px) */
     margin: 10px;
     padding: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -99,4 +99,19 @@ body {
   #historyList li:hover {
     background-color: #e0e0e0;
   }
+/* Create a container for the forecast and recent searches, and add padding and a box shadow */
+#forecastAndRecentSearches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Add this property to distribute the containers horizontally */
+  }
   
+  /* Adjust the width of the forecast and recent searches containers to fit in a row from left to right */
+  #forecast {
+    flex-basis: calc(75% - 40px); /* Change the flex-basis to 75% minus the margin (40px) */
+  }
+  
+  #recentSearches {
+    flex-basis: calc(25% - 40px); /* Change the flex-basis to 25% minus the margin (40px) */
+    margin-top: 20px; /* Add some top margin to separate it from the forecast */
+  }
