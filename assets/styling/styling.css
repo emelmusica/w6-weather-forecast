@@ -77,24 +77,7 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
   }
-  
-  /* Style for the history list container, set it to flex-basis to define the initial size and add padding, margin, and remove list style */
-  #historyList {
-    flex-basis: 200px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
-  /* Style for individual history list items, add a cursor pointer, margin, padding, background color, and border radius */
-  #historyList li {
-    cursor: pointer;
-    margin-bottom: 5px;
-    padding: 8px 16px;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-  }
-  
+
   /* Style for the hover effect on the history list items, change the background color when hovering */
   #historyList li:hover {
     background-color: #e0e0e0;
@@ -103,12 +86,51 @@ body {
 #forecastAndRecentSearches {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Add this property to distribute the containers horizontally */
+    justify-content: space-between; /* Align the forecast and recent searches containers to opposite ends of the row */
   }
   
-  /* Adjust the width of the forecast and recent searches containers to fit in a row from left to right */
   #forecast {
     flex-basis: calc(75% - 40px); /* Change the flex-basis to 75% minus the margin (40px) */
   }
   
+  #recentSearches {
+    flex-basis: 100%; /* Set the width to 100% to take up the full width of the row */
+    margin-top: 20px; /* Add some margin at the top */
+  }
   
+  
+  /* Style for the "Recent Searches" heading */
+  #recentSearches h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for individual history list items */
+  #historyList li {
+    cursor: pointer;
+    margin-bottom: 5px;
+    padding: 8px 16px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+  
+  /* Style for the hover effect on the history list items */
+  #historyList li:hover {
+    background-color: #e0e0e0;
+  }
+
+  /* Create a flex container for the forecast items */
+#forecast .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Style for the individual day forecast, set it to flex-basis to define the initial size, add margin, padding, box shadow, and border radius */
+  #forecast .day {
+    flex-basis: calc(15% - 15px); /* Change the flex-basis to 20% minus the margin (20px) to fit 5 boxes in a row */
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
