@@ -53,4 +53,71 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+  }/* Current Weather Data Container */
+.weather-data {
+    margin-top: 30px;
   }
+  
+  /* Styling for paragraphs within weather data */
+  .weather-data p {
+    margin: 5px 0;
+  }
+  
+  /* Weather Icon Styles */
+  .weather-icon {
+    width: 50px;
+    margin: 10px 0;
+  }
+  
+  /* 5-Day Forecast Section */
+  .forecast {
+    margin-top: 30px;
+  }
+  
+  /* Each Day in 5-Day Forecast */
+  .forecast .day {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for paragraphs within each day in 5-day forecast */
+  .forecast .day p {
+    margin: 0;
+  }
+  
+  /* Weather Icon Styles for 5-day forecast */
+  .forecast .day .weather-icon {
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  /* Search History Section */
+  .search-history {
+    margin-top: 30px;
+  }
+  
+  /* Search History Title */
+  .search-history h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Search History List Styles */
+  #historyList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Each Item in Search History List */
+  #historyList li {
+    cursor: pointer;
+    padding: 5px 0;
+  }
+  
+  /* Hover effect for items in Search History List */
+  #historyList li:hover {
+    text-decoration: underline;
+  }
+  
