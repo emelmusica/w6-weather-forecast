@@ -1,123 +1,95 @@
-/* Reset styles and flex layout for the body */
+/* styles.css */
+
+/* Apply a default font-family, remove margins and padding from the body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
   }
   
-  /* Weather Dashboard Card Container */
-  .weather-card {
-    background-color: #fff;
+  /* Create a container with a maximum width of 800px, centered with auto margins, and add padding and a box shadow */
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
   }
   
-  /* Weather Dashboard Title */
-  .weather-title {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  /* Weather Information Section */
-.weather-info {
-    margin-top: 20px;
-  }
-  
-  /* Search Container using Flex Layout */
+  /* Style for the search container, using flexbox to align items horizontally and add a margin at the bottom */
   .search-container {
     display: flex;
-  }
-  
-  /* Text Input Styles */
-  input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  /* Button Styles */
-button {
-    margin-left: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }/* Current Weather Data Container */
-.weather-data {
-    margin-top: 30px;
-  }
-  
-  /* Styling for paragraphs within weather data */
-  .weather-data p {
-    margin: 5px 0;
-  }
-  
-  /* Weather Icon Styles */
-  .weather-icon {
-    width: 50px;
-    margin: 10px 0;
-  }
-  
-  /* 5-Day Forecast Section */
-  .forecast {
-    margin-top: 30px;
-  }
-  
-  /* Each Day in 5-Day Forecast */
-  .forecast .day {
-    display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
-  /* Styling for paragraphs within each day in 5-day forecast */
-  .forecast .day p {
-    margin: 0;
+  /* Style for the city input, set it to flex: 1 to take available space, add padding, border radius, and a font size */
+  #cityInput {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
   }
   
-  /* Weather Icon Styles for 5-day forecast */
-  .forecast .day .weather-icon {
-    width: 30px;
-    margin-right: 10px;
+  /* Style for the search button, add padding, border radius, background color, text color, and remove the border */
+  #searchBtn {
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
   }
   
-  /* Search History Section */
-  .search-history {
-    margin-top: 30px;
+  /* Hide the weather data container initially and add a margin at the bottom */
+  #weatherData {
+    display: none;
+    margin-bottom: 20px;
   }
   
-  /* Search History Title */
-  .search-history h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
+  /* Create a flex container for the forecast items */
+  .flex-container {
+    display: flex;
   }
   
-  /* Search History List Styles */
+  /* Style for the forecast container, set it to flex: 1 to take available space, use flex-wrap to wrap items to the next line if needed */
+  #forecast {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Style for the individual day forecast, set it to flex-basis to define the initial size and add margin, padding, box shadow, and border radius */
+  .day {
+    flex-basis: calc(33.3333% - 20px);
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
+  
+  /* Style for the history list container, set it to flex-basis to define the initial size and add padding, margin, and remove list style */
   #historyList {
-    list-style: none;
+    flex-basis: 200px;
     padding: 0;
+    margin: 0;
+    list-style: none;
   }
   
-  /* Each Item in Search History List */
+  /* Style for individual history list items, add a cursor pointer, margin, padding, background color, and border radius */
   #historyList li {
     cursor: pointer;
-    padding: 5px 0;
+    margin-bottom: 5px;
+    padding: 8px 16px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
   }
   
-  /* Hover effect for items in Search History List */
+  /* Style for the hover effect on the history list items, change the background color when hovering */
   #historyList li:hover {
-    text-decoration: underline;
+    background-color: #e0e0e0;
   }
   
